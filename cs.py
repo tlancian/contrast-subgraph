@@ -1,4 +1,3 @@
-import pandas as pd
 import argparse
 import os
 from functools import reduce
@@ -14,24 +13,26 @@ parser.add_argument('d', help='dataset', type=str)
 parser.add_argument('c1', help='class1', type=str)
 parser.add_argument('c2', help='class2', type=str)
 parser.add_argument('a', help='alpha', type=float)
-parser.add_argument('--p2', help='alpha', action='store_true')
+parser.add_argument('-p', help='Problem Forumlation', default = "1", choices=["1", "2"])
 
 args = parser.parse_args()
 
 dir1 = "datasets/{}/{}/".format(args.d,args.c1)
-c1 = ["{}/{}".format(dir1,elem) for elem in os.listdir(dir1)]
+c1 = ["{}{}".format(dir1,elem) for elem in os.listdir(dir1)]
+
 
 dir2 = "datasets/{}/{}/".format(args.d,args.c2)
-c2 = ["{}/{}".format(dir2,elem) for elem in os.listdir(dir2)]
+c2 = ["{}{}".format(dir2,elem) for elem in os.listdir(dir2)]
 
 
 # Create and Write Summary Graphs
-summary_c1 = reduce(lambda x,y:x+y,map(lambda x: np.array(pd.read_csv(x, header = None, sep = ",")),c1))/len(os.listdir(dir1))
-summary_c2 = reduce(lambda x,y:x+y,map(lambda x: np.array(pd.read_csv(x, header = None, sep = ",")),c2))/len(os.listdir(dir2))
 
-if not args.p2:
+summary_c1 = reduce(lambda x,y:x+y,map(lambda x: np.loadtxt(x, delimiter = " "),c1))/len(os.listdir(dir1))
+summary_c2 = reduce(lambda x,y:x+y,map(lambda x: np.loadtxt(x, delimiter = " "),c2))/len(os.listdir(dir2))
+
+if args.p == "1":
     diff_net = summary_c1 - summary_c2
-else:
+elif args.p == "2":
     diff_net = abs(summary_c1 - summary_c2)
 
 
