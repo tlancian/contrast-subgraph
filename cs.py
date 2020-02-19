@@ -10,18 +10,18 @@ import subprocess
 parser = argparse.ArgumentParser(description='Graph Classification via Contrast Subgraph')
 
 parser.add_argument('d', help='dataset', type=str)
-parser.add_argument('c1', help='class1', type=str)
-parser.add_argument('c2', help='class2', type=str)
-parser.add_argument('a', help='alpha', type=float)
-parser.add_argument('-p', help='Problem Forumlation', default = "1", choices=["1", "2"])
+parser.add_argument('a', help='Group A', type=str)
+parser.add_argument('b', help='Group B', type=str)
+parser.add_argument('alpha', help='alpha', type=float)
+parser.add_argument('-p', help='Problem Forumlation (default: 1)', default = "1", choices=["1", "2"])
 
 args = parser.parse_args()
 
-dir1 = "datasets/{}/{}/".format(args.d,args.c1)
+dir1 = "datasets/{}/{}/".format(args.d,args.a)
 c1 = ["{}{}".format(dir1,elem) for elem in os.listdir(dir1)]
 
 
-dir2 = "datasets/{}/{}/".format(args.d,args.c2)
+dir2 = "datasets/{}/{}/".format(args.d,args.b)
 c2 = ["{}{}".format(dir2,elem) for elem in os.listdir(dir2)]
 
 
@@ -45,10 +45,10 @@ with open("icdm16-egoscan/net.txt", 'w') as f:
 os.chdir("icdm16-egoscan")
 
 # Run Cadena et al.
-subprocess.call("python densdp.py net.txt {}".format(args.a), shell = True)
+subprocess.call("python densdp.py net.txt {}".format(args.alpha), shell = True)
 
 # Take Results
 cs = eval(open("tmp/net.txt","r").readline())
 
 # Output
-print("Contrast Subgraph {}-{}: {}".format(args.c1, args.c2, cs))
+print("Contrast Subgraph {}-{}: {}".format(args.a, args.b, cs))
