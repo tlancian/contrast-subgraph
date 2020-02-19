@@ -10,24 +10,24 @@
 
 In order to run our code, download [CVX](http://cvxr.com/cvx/download/), unzip the folder and place it in "icdm16-egoscan".
 
-Then, run the following command: 'python cs.py [-h] [-p P] d c1 c2 a'
+Then, run the following command: 'python cs.py [-h] [-p {1,2}] d a b alpha'
 
 #### Positional arguments:
   * d           &nbsp;&nbsp;&nbsp;&nbsp;dataset
-  * c1          &nbsp;&nbsp;&nbsp;&nbsp;First Group of Networks
-  * c2          &nbsp;&nbsp;&nbsp;&nbsp;Second Group of Networks
-  * a          &nbsp;&nbsp;&nbsp;&nbsp;alpha
+  * a          &nbsp;&nbsp;&nbsp;&nbsp;Group A
+  * b          &nbsp;&nbsp;&nbsp;&nbsp;Group B
+  * alpha      &nbsp;&nbsp;&nbsp;&nbsp;alpha
 
 
 #### Optional arguments:
   * -h, --help  
     show the help message and exit	
   * -p       &nbsp;&nbsp;&nbsp;&nbsp;Problem  
-  	Problem formulation. "1" for Problem 1, "2" for Problem 2. (default: 1)
+  	Problem Forumlation (default: 1)
   	
 #### Examples:
 'python cs.py children td asd 0.05'  
-'python cs.py adolescents td asd 0.08 -p 2'  
+'python cs.py adolescents asd td 0.08 -p 2'  
   
 ### Contacts
 Mail to [tommaso.lanciano@uniroma1.it](mailto:tommaso.lanciano@uniroma1.it) for any question.
