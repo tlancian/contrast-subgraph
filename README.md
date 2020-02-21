@@ -1,6 +1,6 @@
 ## Explainable classification of brain networks via contrast subgraphs
 
-[Tommaso Lanciano](https://phd.uniroma1.it/web/LANCIANO-TOMMASO_nP1661409_EN.aspx) (Sapienza University, Rome), [Francesco Bonchi](http://www.francescobonchi.com/) (Eurecat, Barcelona & ISI Foundation, Turin), and [Aristides Gionis](https://www.kth.se/profile/argioni) (KTH, Stockholm).
+[Tommaso Lanciano](https://phd.uniroma1.it/web/LANCIANO-TOMMASO_nP1661409_EN.aspx) (Sapienza University, Rome), [Francesco Bonchi](http://www.francescobonchi.com/) (ISI Foundation, Turin & Eurecat, Barcelona), and [Aristides Gionis](https://www.kth.se/profile/argioni) (KTH, Stockholm).
 
 ### Folders
 * datasets: datasets listed in Table 1.
