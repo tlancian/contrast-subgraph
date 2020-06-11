@@ -1,6 +1,10 @@
-## Explainable classification of brain networks via contrast subgraphs
+## Explainable Classification of Brain Networks via Contrast Subgraphs
 
 [Tommaso Lanciano](https://phd.uniroma1.it/web/LANCIANO-TOMMASO_nP1661409_EN.aspx) (Sapienza University, Rome), [Francesco Bonchi](http://www.francescobonchi.com/) (ISI Foundation, Turin & Eurecat, Barcelona), and [Aristides Gionis](https://www.kth.se/profile/argioni) (KTH, Stockholm).
+
+_Mining human-brain networks to discover patterns that can be used to discriminate between healthy individuals and patients affected by some neurological disorder, is a fundamental task in neuroscience. Learning simple and interpretable models is as important as mere classification accuracy. In this paper we introduce a novel approach for classifying brain networks based on extracting contrast subgraphs, i.e., a set of vertices whose induced subgraphs are dense in one class of graphs and sparse in the other. We formally define the problem and present an algorithmic solution for extracting contrast subgraphs. We then apply our method to a brain-network dataset consisting of children affected by Autism Spectrum Disorder and children Typically Developed. Our analysis confirms the interestingness of the discovered patterns, which match background knowledge in the neuroscience literature. Further analysis on other classification tasks confirm the simplicity, soundness, and high explainability of our proposal, which also exhibits superior classification accuracy, to more complex state-of-the-art methods._
+
+---
 
 This repository contains the code necessary to implement algorithms described in the paper "Explainable classification of brain networks via contrast subgraphs", KDD 2020.
 
@@ -10,10 +14,17 @@ This package is free for research, academic and non-profit making purposes only.
 <strong>TERMS OF USAGE:</strong>
 The following paper should be cited in any research product whose findings are based on the code here distributed:
 
-- T. Lanciano, F. Bonchi, A. Gionis.<br>
-Explainable classification of brain networks via contrast subgraphs.<br>
-Proceedings of the 26th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD 2020). San Diego, CA, USA - August 23-27, 2020.
+- Tommaso Lanciano, Francesco Bonchi, and Aristides Gionis. 2020. Explainable Classification of Brain Networks via Contrast Subgraphs. In Proceedings of the 26th ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD ’20), August 23–27, 2020, Virtual Event, CA, USA. ACM, New York, NY, USA, 11 pages. https://doi.org/10.1145/3394486.3403383
 <p>
+
+### Requirements
+
+The code has been tested with:
+
+* Python 2.7
+* Matlab R2019a
+* CVX
+* Networkx==1.9
 
 ### Folders
 * datasets: datasets listed in Table 1.
