@@ -55,7 +55,15 @@ Then, run the following command: 'python cs.py [-h] [-p {1,2}] d a b alpha'
   	
 #### Examples:
 'python cs.py children td asd 0.05'  
-'python cs.py adolescents asd td 0.08 -p 2'  
+'python cs.py adolescents asd td 0.08 -p 2'
+  
+---
+
+:warning: The values of alpha reported in the paper refer to the following quantity: n-th percentile of the distribution of the weights in the difference graphs (TD-ASD and ASD-TD). This choice gives the user an idea on how many edges in the graph are being considered detrimental for the objective function.
+
+We thank Jiaxing Xu (Nanyang Technology University, Singapore) and Yunhan Yang (Auckland University, New Zealand) for noticing that this was not specified in our paper.
+  
+---
   
 ### Contacts
 Mail to [tommaso.lanciano@uniroma1.it](mailto:tommaso.lanciano@uniroma1.it) for any question.
